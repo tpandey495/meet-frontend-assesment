@@ -9,7 +9,11 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import data from '../config/data';
+import { styled } from "@mui/material/styles";
 
+export const CButton = styled(Button)((props) => ({
+  color:"rgba(20, 150, 123, 1)"
+}));
 
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -24,15 +28,15 @@ const DrawerComp = () => {
         <List>
           <Tabs value={0} orientation="vertical">
             {data.map((pages, index) => (
-              <Tab  key={index} label={pages.name} icon={pages.icon}/>
+             index==0? (<Tab  key={index} label={pages.name} style={{color:" rgba(91, 194, 168, 1)"}} icon={pages.icon}/>):<Tab  key={index} label={pages.name} icon={pages.icon}/>
             ))}
           </Tabs>
         </List>
-        <Button sx={{ marginLeft: "auto" ,marginRight:"auto"}} variant="outlined">
-          Login
-        </Button>
+        <CButton sx={{ marginLeft: "auto" ,marginRight:"auto"}} variant="outlined">
+          Post Job
+        </CButton>
         <Button sx={{ marginLeft: "auto",marginRight:"auto",marginTop:"20px",background:"#14967B" }} variant="contained">
-          SignUp
+          Sign In
         </Button>
       </Drawer>
       <IconButton
