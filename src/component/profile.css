@@ -1,0 +1,169 @@
+
+.user-profile{
+  margin-top:100px;
+  font-family: 'Roboto ', sans-serif; 
+   font-style:'Regular';
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile{
+  height:507px;
+  width:60%;
+  color:black;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .profile {
+      width:90%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .profile {
+      width:60%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .profile {
+      width:90%;
+  }
+}
+
+.total-experience{
+  display:flex;
+}
+
+@media(max-width:750px) {
+  .total-experience{
+    flex-direction:column;
+  }
+}
+
+
+/* left box */
+  .user-pic{
+    width:40%;
+  }
+
+  .user-pic img{
+    width:100%;
+    height:505px;
+  }
+ 
+  @media(max-width:750px) {
+    .user-pic{
+      width:100%;
+    }
+  }
+
+ 
+/* right box */
+.experience-det{
+  width:50%;
+  margin-left:auto;
+  height:450px;
+  overflow-y: scroll;
+}
+
+@media(max-width:750px) {
+  .experience-det{
+    width:100%;
+  }
+}
+
+/* styling for scrollbar */
+::-webkit-scrollbar{
+  width:5px;
+}
+
+::-webkit-scrollbar-track{
+  background-color:white;
+}
+
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(91, 194, 168, 1);
+}
+
+
+
+/* user basic details */
+.user-info {
+  margin-top:20px;
+  display:flex;
+  justify-content:flex-start;
+  font-family:Roboto;
+  font-size: 17px;
+  font-weight: 500;
+ }
+
+.user-info span{
+    padding:6px;
+}
+
+.user-info .locicon{
+    color:rgba(20, 150, 123, 1);
+}
+
+/* user experience */
+.user-experience .experience{
+   display:flex;
+   margin-top:10px;
+   color:rgba(20, 150, 123, 1);
+}
+
+.user-experience span{
+    padding:10px;
+}
+
+.user-experience .user-post{
+  font-weight:bold;
+}
+
+.user-experience span button{
+  height:22px;
+  width:76px;
+  background-color:rgba(91, 194, 168, 1);
+  border:none;
+  border-radius:2px;
+}
+
+
+
+/* experience-info */
+.experience-info{
+  margin-top:30px;
+   display:flex;
+   flex-direction:column;
+   margin-left:37px;
+   gap:10px;
+}
+
+.company-name{
+  line-height:3px;
+}
+
+/* Education */
+
+.education-info{
+  display:flex;
+  flex-direction:column;
+  margin-top:20px;
+ }
+
+ .education-info span{
+   color:rgba(20, 150, 123, 1);
+ }
+
+.education-info .education{
+  display:flex;
+} 
+
+.education-info .course-name,.user-college{
+  margin-left:37px;
+}
+
