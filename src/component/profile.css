@@ -139,9 +139,10 @@
   margin-top:30px;
    display:flex;
    flex-direction:column;
-   margin-left:37px;
+   margin-left: 37px;
    gap:10px;
 }
+
 
 .company-name{
   line-height:3px;

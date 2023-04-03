@@ -36,7 +36,7 @@ const  Profile=()=> {
        <Paper elevation={2}>
         <Box className="total-experience">
             <Box className="user-pic">
-              <img  src={Profilepic} alt="user-profile"/>
+              <img  src={user?.data[0]?.user_image_url} alt="user-profile"/>
             </Box>
             <Box className="experience-det">
               <Box className="user-info">
@@ -55,7 +55,7 @@ const  Profile=()=> {
                  {
                 user?.data[0]?.user_experiences.map((item,index)=>{
                 return <Box className="experience-info" key={index}>
-                      {/* <img src={require('https://meet-works-bucket.s3-us-west-2.amazonaws.com/public/1632399657434')} alt="company_logo" />  */}
+                        {/* <img src={item.company_logo}  alt="company_logo" />  */}
                         <Box className="user-post">{item?.user_post}</Box>
                         <Box className="company-name">{item?.company_name}</Box>
                         <Box className="duration">{item?.company_starting_date}-{item?.company_ending_date}</Box>
