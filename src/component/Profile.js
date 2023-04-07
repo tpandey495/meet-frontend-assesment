@@ -1,32 +1,18 @@
 import React, { useState,useEffect } from 'react'
-import axios from 'axios';
 import { Box,Paper} from '@mui/material';
 import Profilepic from '../assets/user.png';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import SchoolIcon from '@mui/icons-material/School';
 import './profile.css'
-
+import useProfile from '../utils/useProfile';
 
 const  Profile=()=> {
-    const[user,setUser]=useState([]);
     const payload={
         jobseeker_id: "614b410c2c4b197356a37f18"
     }
-    useEffect(()=>{
-      fetchData();
-    },[])
-    const  fetchData=async()=>{
-        try{
-            const data=await axios.post("https://api.meetworks.in/users/get_unique_jobseeker_profile",payload);
-            console.log(data);
-            setUser(data);
-        }
-        catch(Err){
-          return <div>{Err}</div>
-        }
-    }
-
+    const user= useProfile(payload);
+   
   return (
     <Box className="user-profile">
      {
