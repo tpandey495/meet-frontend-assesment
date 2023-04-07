@@ -55,8 +55,12 @@ const  Profile=()=> {
                  {
                 user?.data[0]?.user_experiences.map((item,index)=>{
                 return <Box className="experience-info" key={index}>
-                        {/* <img src={item.company_logo}  alt="company_logo" />  */}
-                        <Box className="user-post">{item?.user_post}</Box>
+                        <Box className="logo-box">
+                           {
+                       item.company_logo&&<img className="company-logo" width={"34px"} src={item.company_logo} alt="company_logo" /> 
+                           } 
+                          <Box className="user-post">{item?.user_post}</Box>
+                        </Box>
                         <Box className="company-name">{item?.company_name}</Box>
                         <Box className="duration">{item?.company_starting_date}-{item?.company_ending_date}</Box>
                         <Box className="role-description">{item?.role_discription}</Box>
